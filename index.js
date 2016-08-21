@@ -170,4 +170,4 @@ module.exports = {
   generate_random: function(passphrases, range, fun) {
     return modulo((fun ? fun : Sha1.hash)(passphrases.join("")), range);
   }
-];
+};
