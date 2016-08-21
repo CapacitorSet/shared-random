@@ -168,6 +168,6 @@ module.exports = {
     return (fun ? fun : Sha1.hash)(passphrase) === hash;
   },
   generate_random: function(passphrases, range, fun) {
-    return modulo((fun ? fun : Sha1.hash)(passphrases.join("")), range);
+    return modulo((fun ? fun : Sha1.hash)(passphrases.sort().join("")), range);
   }
 };
